@@ -11,7 +11,7 @@
 <body>
 
     <!--Welcome message and instructions-->
-    <div id="welome" class="container">
+    <div id="welcome" class="container">
       <h2>Welcome to the card memory Game!</h2>
         <h4><u>Instructions to play the game</u></h4>
           <p> The gameplay rules are very simple: flip over two hidden cards at a time to locate the ones that match!</p>
@@ -23,11 +23,9 @@
             <li>If the cards do not match, both cards are flipped face down.</li>
             <li>The game ends once all cards have been correctly matched.</li>
           </ul>
-      <h2> Enter your name to start the Game </h2>
-      <form id="submit-name">
+      <h2> Submit your name to start the Game </h2>
         Game Name: <input type="text" id="game-name" name="game-name">
-        <input type="submit" id="submit" value="Submit">
-      </form>
+        <button onclick="submitName()">Submit</button>
     </div>
     <!--End of welcome message and instructions-->
     <div id="game" class="container">
@@ -36,27 +34,35 @@
         </header>
 
         <section class="score-panel">
+          <div class="welcomeName">
+            <!-- Dynamically add Name-->
+          </div>
+
+          <!--Stars-->
         	<ul class="stars">
         		<li><i class="fa fa-star"></i></li>
         		<li><i class="fa fa-star"></i></li>
         		<li><i class="fa fa-star"></i></li>
         	</ul>
 
+          <!--Number of moves-->
         	<span class="moves">3</span> Moves
 
-            <div class="restart">
+          <!--Restart Game-->
+          <div class="restart">
         		<i class="fa fa-repeat"></i>
         	</div>
+
         </section>
 
-        <ul class="deck">
+        <ul class="deck" type="deck">
             <li class="card">
                 <i class="fa fa-diamond"></i>
             </li>
             <li class="card">
                 <i class="fa fa-paper-plane-o"></i>
             </li>
-            <li class="card match">
+            <li class="card">
                 <i class="fa fa-anchor"></i>
             </li>
             <li class="card">
@@ -65,7 +71,7 @@
             <li class="card">
                 <i class="fa fa-cube"></i>
             </li>
-            <li class="card match">
+            <li class="card">
                 <i class="fa fa-anchor"></i>
             </li>
             <li class="card">
